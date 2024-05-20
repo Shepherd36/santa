@@ -240,7 +240,6 @@ func Test_Repository_calculateUnachievedPercentages(t *testing.T) {
 		Expected(expectedForRandomAchievedUsers(LevelGroupType, random...)))
 	r := &repository{}
 	for _, tt := range tests {
-		tt := tt
 		t.Run(fmt.Sprintf("%v(%v)", tt.desc, tt.name), func(t *testing.T) {
 			t.Parallel()
 			actual := r.calculateUnachievedPercentages(tt.group, tt.stats)
@@ -381,7 +380,6 @@ func Test_Progress_BuildBadges(t *testing.T) {
 		},
 	}
 	for _, tt := range tests {
-		tt := tt
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 			actual := tt.progress.buildBadges(repo, tt.group, tt.stats)
@@ -473,7 +471,6 @@ func Test_Progress_BuildSummary(t *testing.T) {
 		},
 	}
 	for _, tt := range tests {
-		tt := tt
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 			actualSummaries := tt.progress.buildBadgeSummaries()
@@ -496,7 +493,7 @@ func expectedForRandomAchievedUsers(group GroupType, userCounts ...int) map[Type
 
 func randomAchievedUsers(count int) []int {
 	achievedUserCounts := make([]int, count) //nolint:makezero // We're know size for sure.
-	for i := 0; i < count; i++ {
+	for i := 0; i < count; i++ {             //nolint:intrange // .
 		achievedUserCounts[i] = rand.Intn(totalUsers) //nolint:gosec // We dont need strong random for tests.
 		if i > 0 && achievedUserCounts[i] > achievedUserCounts[i-1] {
 			achievedUserCounts[i] = randomAchievedUsers(1)[0]

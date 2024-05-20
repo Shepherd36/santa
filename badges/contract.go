@@ -85,7 +85,7 @@ var (
 		Social9Type,
 		Social10Type,
 	}
-	//nolint:gochecknoglobals,gomnd // .
+	//nolint:gochecknoglobals,mnd,gomnd // .
 	LevelTypeOrder = map[Type]int{
 		Level1Type: 0,
 		Level2Type: 1,
@@ -94,7 +94,7 @@ var (
 		Level5Type: 4,
 		Level6Type: 5,
 	}
-	//nolint:gochecknoglobals,gomnd // .
+	//nolint:gochecknoglobals,mnd,gomnd // .
 	CoinTypeOrder = map[Type]int{
 		Coin1Type:  0,
 		Coin2Type:  1,
@@ -107,7 +107,7 @@ var (
 		Coin9Type:  8,
 		Coin10Type: 9,
 	}
-	//nolint:gochecknoglobals,gomnd // .
+	//nolint:gochecknoglobals,mnd,gomnd // .
 	SocialTypeOrder = map[Type]int{
 		Social1Type:  0,
 		Social2Type:  1,
@@ -120,7 +120,7 @@ var (
 		Social9Type:  8,
 		Social10Type: 9,
 	}
-	//nolint:gochecknoglobals,gomnd // .
+	//nolint:gochecknoglobals,mnd,gomnd // .
 	AllTypeOrder = map[Type]int{
 		Level1Type:   0,
 		Level2Type:   1,

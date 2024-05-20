@@ -114,7 +114,6 @@ func TestReEvaluateCompletedLevels(t *testing.T) { //nolint:funlen // It's a tes
 	}
 
 	for _, tt := range testCases { //nolint:gocritic // it's a test, no need for optimization
-		tt := tt
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 
@@ -153,7 +152,6 @@ func TestReEvaluateEnabledRoles(t *testing.T) { //nolint:funlen // It's a test f
 	}
 
 	for _, tt := range testCases { //nolint:gocritic // it's a test, no need for optimization
-		tt := tt
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 

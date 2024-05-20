@@ -108,7 +108,6 @@ func Test_Progress_ReevaluateAchievedBadges(t *testing.T) {
 		},
 	}
 	for _, tt := range testCases {
-		tt := tt
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 			actualAchievedBadges := tt.progress.reEvaluateAchievedBadges(&repository{cfg: tt.cfg})
@@ -212,7 +211,6 @@ func Test_IsBadgeGroupAchieved(t *testing.T) {
 		},
 	}
 	for _, tt := range testCases {
-		tt := tt
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 			actualIsGroupAchieved := IsBadgeGroupAchieved(tt.alreadyAchievedBadges, tt.group)

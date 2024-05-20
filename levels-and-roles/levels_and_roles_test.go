@@ -54,7 +54,6 @@ func TestAreLevelsCompleted(t *testing.T) { //nolint:funlen // It's a test funct
 	}
 
 	for _, tt := range testCases { //nolint:gocritic // it's a test, no need for optimization
-		tt := tt
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 
