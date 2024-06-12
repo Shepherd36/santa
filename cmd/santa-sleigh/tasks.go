@@ -36,7 +36,7 @@ func (s *service) setupTasksRoutes(router *server.Router) {
 //	@Failure		422				{object}	server.ErrorResponse	"if syntax fails"
 //	@Failure		500				{object}	server.ErrorResponse
 //	@Failure		504				{object}	server.ErrorResponse	"if request times out"
-//	@Router			/tasks/{taskType}/users/{userId} [PUT].
+//	@Router			/v1w/tasks/{taskType}/users/{userId} [PUT].
 func (s *service) PseudoCompleteTask( //nolint:gocritic // False negative.
 	ctx context.Context,
 	req *server.Request[CompleteTaskRequestBody, any],

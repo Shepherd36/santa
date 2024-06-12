@@ -20,12 +20,11 @@ import (
 
 // @title						Achievements API
 // @version					latest
-// @description				API that handles everything related to write-only operations for user's achievements and gamification progress.
+// @description				API that handles everything related to user's achievements and gamification progress.
 // @query.collection.format	multi
 // @schemes					https
 // @contact.name				ice.io
 // @contact.url				https://ice.io
-// @BasePath					/v1w
 func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
@@ -38,6 +37,7 @@ func main() {
 }
 
 func (s *service) RegisterRoutes(router *server.Router) {
+	s.registerReadRoutes(router)
 	s.setupTasksRoutes(router)
 }
 
